@@ -137,7 +137,7 @@ function OnGUI(){
  			
  			}
  			
-	 GUI.Label(Rect(10,40,60,30),"Caisses : "+ totalBox);
+	 GUI.Label(Rect(10,40,90,30),"Caisses : "+ totalBox);
     
     
 } 
@@ -148,13 +148,11 @@ function OnGUI(){
 
 
 
-
 function OnCollisionEnter(collision : Collision) {
 		// Debug-draw all contact points and normals
 		
-	if(collision.gameObject.name == "box") {
+	if(collision.gameObject.tag == "box") {
 		totalBox ++;
-	
 		Destroy(collision.gameObject);
 	}
 		
